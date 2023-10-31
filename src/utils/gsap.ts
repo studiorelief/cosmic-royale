@@ -96,7 +96,7 @@ function kartAnim(): void {
 
 function planetAnim(): void {
   const planetDurations: { [key: string]: number } = {
-    '.planete_1': 20,
+    '.planete_1': 21,
     '.planete_1-1': 18,
     '.planete_2': 15,
     '.planete_2-1': 13,
