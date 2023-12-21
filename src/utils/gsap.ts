@@ -120,4 +120,21 @@ function planetAnim(): void {
   }
 }
 
-export { kartAnim, planetAnim, sparkleAnim };
+function animateRoadmap() {
+  gsap.set('.roadmap_step', { opacity: 0.2, y: '4rem' });
+  gsap.to('.roadmap_step', {
+    scrollTrigger: {
+      markers: true,
+      trigger: '.roadmap_right',
+      start: '0% 40%', // Ajustez ces valeurs selon vos besoins
+      end: '75% 40%',
+      scrub: true,
+    },
+    opacity: 1,
+    y: 0,
+    duration: 5,
+    stagger: 3,
+  });
+}
+
+export { animateRoadmap, kartAnim, planetAnim, sparkleAnim };
