@@ -1,7 +1,9 @@
 import gsap from 'gsap';
+import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(MotionPathPlugin);
 
 //! Fonction Sparkle
 
@@ -62,6 +64,27 @@ function sparkleAnim(): void {
         },
       }
     );
+  });
+
+  gsap.to('[sparkle="is-big"]', {
+    duration: 30,
+    rotate: 360,
+    repeat: -1, // Infinite loop
+    ease: 'linear',
+  });
+
+  gsap.to('[sparkle="is-medium"]', {
+    duration: 40,
+    rotate: 360,
+    repeat: -1, // Infinite loop
+    ease: 'linear',
+  });
+
+  gsap.to('[sparkle="is-small"]', {
+    duration: 50,
+    rotate: 360,
+    repeat: -1, // Infinite loop
+    ease: 'linear',
   });
 }
 
@@ -124,10 +147,10 @@ function animateRoadmap() {
   gsap.set('.roadmap_step', { opacity: 0.2, y: '4rem' });
   gsap.to('.roadmap_step', {
     scrollTrigger: {
-      markers: true,
+      markers: false,
       trigger: '.roadmap_right',
-      start: '0% 40%', // Ajustez ces valeurs selon vos besoins
-      end: '75% 40%',
+      start: '0% 55%', // Ajustez ces valeurs selon vos besoins
+      end: '75% 55%',
       scrub: true,
     },
     opacity: 1,
@@ -137,4 +160,76 @@ function animateRoadmap() {
   });
 }
 
-export { animateRoadmap, kartAnim, planetAnim, sparkleAnim };
+function animateRotate() {
+  gsap.set('#planete-1, #planete-2, #planete-3, #planete-4, #planete-5, #planete-6', {
+    xPercent: -50,
+    yPercent: -50,
+    transformOrigin: '50% 50%',
+  });
+  // path 1
+  gsap.to('#planete-1', {
+    duration: 20,
+    repeat: -1,
+    ease: 'linear',
+    motionPath: {
+      path: '#path1',
+      align: '#path1',
+      autoRotate: false,
+    },
+  });
+  // path 2
+  gsap.to('#planete-2', {
+    duration: 10,
+    repeat: -1,
+    ease: 'linear',
+    motionPath: {
+      path: '#path2',
+      align: '#path2',
+      autoRotate: false,
+    },
+  });
+  gsap.to('#planete-5', {
+    duration: 6,
+    repeat: -1,
+    ease: 'linear',
+    motionPath: {
+      path: '#path2',
+      align: '#path2',
+      autoRotate: false,
+    },
+  });
+  // path 3
+  gsap.to('#planete-3', {
+    duration: 7,
+    repeat: -1,
+    ease: 'linear',
+    motionPath: {
+      path: '#path3',
+      align: '#path3',
+      autoRotate: false,
+    },
+  });
+  // path 4
+  gsap.to('#planete-4', {
+    duration: 9,
+    repeat: -1,
+    ease: 'linear',
+    motionPath: {
+      path: '#path4',
+      align: '#path4',
+      autoRotate: false,
+    },
+  });
+  gsap.to('#planete-5', {
+    duration: 12,
+    repeat: -1,
+    ease: 'linear',
+    motionPath: {
+      path: '#path2',
+      align: '#path2',
+      autoRotate: false,
+    },
+  });
+}
+
+export { animateRoadmap, animateRotate, kartAnim, planetAnim, sparkleAnim };

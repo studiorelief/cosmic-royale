@@ -5,7 +5,7 @@ function heroAnim(): void {
   if (!heroElement || !navbarElement) return; // Si l'un des éléments n'existe pas, sortez de la fonction.
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > window.innerHeight * 1.05) {
+    if (window.scrollY > window.innerHeight * 2) {
       heroElement.classList.add('hide');
       navbarElement.style.top = '0rem';
       navbarElement.classList.add('z-index-100');
