@@ -22,7 +22,7 @@ window.Webflow.push(() => {
   // Gsap planete
   animateRotate();
 
-  setTimeout(() => {
+  /*   setTimeout(() => {
     if (window.location.pathname === '/') {
       // Checks if the current page is the homepage
       if (window.scrollY === 0) {
@@ -30,5 +30,5 @@ window.Webflow.push(() => {
         window.scrollBy({ top: window.innerHeight * 2.1, behavior: 'smooth' });
       }
     }
-  }, 2000);
+  }, 2000); */
 });
