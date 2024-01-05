@@ -12,3 +12,9 @@
     pointer-events: none;
 }
 
+/* Zealy button */ 
+.button-blue_component:hover .button-blue_wrapper.is-zealy {
+    border-color: var(--color--orange);
+    background-image: linear-gradient(to right, var(--button--i_left-orange), var(--button--i_right-orange));
+    opacity: 0.5;
+}

@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../src/index.css"],
-  "sourcesContent": [".button-blue_component:hover .button-blue_wrapper {\n    border-color: var(--color--orange);\n    background-image: linear-gradient(to right, var(--button--i_left-orange), var(--button--i_right-orange));\n}\n\n.button-pink_component:hover .button-pink_wrapper {\n    border-color: var(--color--orange);\n    background-image: linear-gradient(to right, var(--button--i_left-orange), var(--button--i_right-orange));\n}\n\n.navbar_icon {\n    pointer-events: none;\n}\n\n"],
-  "mappings": ";AAAA;AACI;AACA;AAAA;AAGJ;AACI;AACA;AAAA;AAGJ;AACI;AAAA;",
+  "sourcesContent": [".button-blue_component:hover .button-blue_wrapper {\n    border-color: var(--color--orange);\n    background-image: linear-gradient(to right, var(--button--i_left-orange), var(--button--i_right-orange));\n}\n\n.button-pink_component:hover .button-pink_wrapper {\n    border-color: var(--color--orange);\n    background-image: linear-gradient(to right, var(--button--i_left-orange), var(--button--i_right-orange));\n}\n\n.navbar_icon {\n    pointer-events: none;\n}\n\n/* Zealy button */ \n.button-blue_component:hover .button-blue_wrapper.is-zealy {\n    border-color: var(--color--orange);\n    background-image: linear-gradient(to right, var(--button--i_left-orange), var(--button--i_right-orange));\n    opacity: 0.5;\n}\n"],
+  "mappings": ";AAAA;AACI;AACA;AAAA;AAGJ;AACI;AACA;AAAA;AAGJ;AACI;AAAA;AAIJ;AACI;AACA;AACA;AAAA;",
   "names": []
 }
