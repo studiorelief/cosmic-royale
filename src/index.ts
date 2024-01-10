@@ -9,7 +9,10 @@ import { heroAnim } from './home/homeHero';
 window.Webflow ||= [];
 window.Webflow.push(() => {
   // hero scrolling
-  heroAnim();
+  if (window.innerWidth >= 900) {
+    heroAnim();
+  }
+
   loadModelViewerScript();
   typeHero();
 
