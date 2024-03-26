@@ -5,7 +5,7 @@ function typeHero(): void {
   const el2 = document.querySelector('.about_heading-1-shadow');
 
   // Options pour Typed.js
-  const originalText = 'Race, Battle, Win';
+  const originalText = 'Win, Battle, Race';
   const reversedText = originalText
     .split(/([,\s]+)/)
     .reverse()
